@@ -2,6 +2,7 @@ package main
 
 import (
 	util "../util"
+	//	"encoding/json"
 	"fmt"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
@@ -24,21 +25,33 @@ var (
 
 	//TODO: randomize
 	randomState = "random"
+	admin       = User{"I don't", "Care", "aug.ornelas@gmail.com"}
 )
+
+type User struct {
+	name     string
+	lastname string
+	email    string
+}
 
 func main() {
 	http.HandleFunc("/", handleHome)
 	http.HandleFunc("/login", handleLogin)
 	http.HandleFunc("/callback", handleCallback)
-	http.HandleFunc("/todd", util.ToddFunc)
-	http.HandleFunc("/ming", util.MingFunc)
-	http.HandleFunc("/rio", util.RioFunc)
+	http.HandleFunc("/professional", util.Professional)
+	http.HandleFunc("/commercial", util.Commercial)
+	http.HandleFunc("/private", util.Private)
 	http.ListenAndServe(":8080", nil)
 }
 
 func handleHome(w http.ResponseWriter, r *http.Request) {
-	var html = `<html><body><a href="/login">Google Log In</a></body></html>`
-	fmt.Fprint(w, html)
+	path := "templates/login.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
 }
 
 func handleLogin(w http.ResponseWriter, r *http.Request) {
@@ -70,20 +83,30 @@ func handleCallback(w http.ResponseWriter, r *http.Request) {
 	defer resp.Body.Close()
 	//	content, err := ioutil.ReadAll(resp.Body)
 
+	/*	c := make(map[string]string)
+		//	e := json.Unmarshal(content, &c)
+
+		if e != nil {
+			fmt.Printf("could not parse response: %s\n", e.Error())
+			http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
+		}
+
+		user := User{email: c["email"]}*/
 	if err != nil {
 		fmt.Printf("could nor parse response: %s\n", err.Error())
 		http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
 		return
 	}
-	/*Useful for debugging
-	fmt.Fprint(w, `<html><body>`)
-	fmt.Fprintf(w, "Response: %s", content)
-	home := `<a href=/todd>Home</a>`
-	fmt.Fprint(w, home)
-	fmt.Fprint(w, `</body></html>`)
-	*/
-	//Uses home.html as the home page
+	//Useful for debugging
+	/*	fmt.Fprint(w, `<html><body>`)
+		fmt.Fprintf(w, "Response: %s", content)
+		home := `<a href=/professional>Home</a>`
+		fmt.Fprintf(w, home)
 
+		fmt.Fprint(w, `</body></html>`)
+
+		//Uses home.html as the home page
+		//	fmt.Fprint(w, user.email)*/
 	data, err := ioutil.ReadFile("templates/home.html")
 	if err == nil {
 		w.Write(data)

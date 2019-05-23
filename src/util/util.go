@@ -114,7 +114,7 @@ const doc1 = `<!DOCTYPE html>
 
 const filename = "templates/test.html"
 
-func MingFunc(w http.ResponseWriter, req *http.Request) {
+func Professional(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 	tmpl, err := template.New("mingTemplate").Parse(doc1)
 	if err == nil {
@@ -125,7 +125,7 @@ func MingFunc(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func RioFunc(w http.ResponseWriter, req *http.Request) {
+func Commercial(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 	tmpl, err := template.New("rioTemplate").Parse(doc1)
 	if err == nil {
@@ -136,7 +136,7 @@ func RioFunc(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func JamesFunc(w http.ResponseWriter, req *http.Request) {
+func Private(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 	tmpl, err := template.New("jamesTemplate").Parse(doc1)
 	if err == nil {
