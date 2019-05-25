@@ -40,6 +40,7 @@ func main() {
 	http.HandleFunc("/callback", handleCallback)
 	http.HandleFunc("/professional", util.Professional)
 	http.HandleFunc("/commercial", util.Commercial)
+	http.HandleFunc("/professional/proposal", util.Proposal)
 	http.HandleFunc("/private", util.Private)
 	http.ListenAndServe(":8080", nil)
 }
