@@ -107,7 +107,7 @@ func handleCallback(w http.ResponseWriter, r *http.Request) {
 
 		//Uses home.html as the home page
 		//	fmt.Fprint(w, user.email)*/
-	data, err := ioutil.ReadFile("templates/home.html")
+	data, err := ioutil.ReadFile("templates/register.html")
 	if err == nil {
 		w.Write(data)
 	} else {
