@@ -1,5 +1,33 @@
 <!doctype html>
 <html lang="en">
+
+  <style>
+   label.bold {
+     font-weight: bold;
+     font-size: 2vw;
+   }
+   .navbar {
+     width: 100%;
+     background-color: #555;
+     overflow: auto;
+   }
+
+   /* Navbar links */
+   .navbar a {
+     float: left;
+     text-align: center;
+     padding: 0px;
+     color: white;
+     text-decoration: none;
+     font-size: 17px;
+   }
+
+   /* Navbar links on mouse-over */
+   .navbar a:hover {
+     background-color: #000;
+   }
+  </style>
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,17 +36,26 @@
     <!-- Bootstrap CSS -->
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Hello, world!</title>
+
+    <title>Registar Profissional</title>
+
   </head>
-  <!-- Name of the company -->
+  
   <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <div class="navbar">
+	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+	<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+	<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+	<a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+      </div>
+      <br>
+      <label class="bold">Registo Profissioal</label>
     <div class="container">
       <div class="jumbotron">
-	<h1>LetMeFix
-	</h1>
-	</div>
+
       <form>
-	  <h3> Professional </h3>
 		<div class="form-group">
 			<label for="nome_empresa">Nome Da Empresa</label><br>
 			<input Type="text" class="form-contol" id="nome_empresa" placeholder="nome da empresa">
@@ -41,14 +78,13 @@
 		<div class="form-group">
 			<label for="competencias">Competências</label><br>
 			<textarea rows="4" cols="50" id="competencias">
-			
 			</textarea>
 		</div>
 		<div class="form-group">
 			<label for="services">Serviços</label><br>
 				<textarea rows="4" cols="50" id="services">
-			
-			</textarea></div>
+			</textarea>
+    </div>
 		<div class="form-group">
 			<label for="precos">Preço</label>
 			<input type="text" class="form-control" id="precos" placeholder="">
@@ -68,3 +104,4 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+

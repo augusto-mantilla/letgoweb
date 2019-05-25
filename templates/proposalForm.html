@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
   <style>
    label.bold {
      font-weight: bold;
@@ -26,8 +25,11 @@
    .navbar a:hover {
      background-color: #000;
    }
-  </style>
 
+   span{
+     color: red;
+   }
+  </style>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -36,52 +38,48 @@
     <!-- Bootstrap CSS -->
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Registo</title>
+    <title>Registar</title>
   </head>
   <!-- Name of the company -->
   <body>
     <div class="container">
       <div class="jumbotron">
-        	<h1>LetMeFix</h1>
+	<h1>LetMeFix</h1>
       </div>
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
       <div class="navbar">
-	        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-	        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-        	<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-	        <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+	<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+	<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+	<a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
       </div>
       <br>
-      <label class="bold">Registar Cliente Privado<label>
+
+      <label class="bold">Formulário da proposta ao cliente</label>
+
       <form>
-		<div class="form-group">
-			<label for="nome_completo">Nome Completo</label><br>
-			<input Type="text" class="form-contol" id="nome_completo" placeholder="escrever nome">
-		</div>
+	<span>*Campos Obrigatórios</span><br>
+	<br>
+	<b>Preço:<span>*</span>  </b><input type="number" step="0.01" style="width: 100px;" name="preço"> €<br>
+	<br>
+	<b>Data de incio de obra:<span>*</span>  </b><input type="date" name="incioObra"><br>
+	<br>
+	<b>Data de fim de obra:<span>*</span>  </b><input type="date" name="fimObra"><br>
+	<br>
+	<b>Custo de cancelamento ou alterações significativas:<span>*</span>  </b><input type="number" style="width: 100px;" name="cancAlt"> €<br>
+	<br>
+	<b>Observações relevantes para o cliente: </b><br>
+	<textarea name="observacoes" rows="5" cols="50"></textarea><br>
+	<br>
 
-		<div class="form-group">
-			<label for="nif">NIF</label>
-			<input type="text" class="form-control" id="nif"  placeholder="">
-		</div>
-		<div class="form-group">
-			<label for="contacts">Contacto</label>
-			<input type="text" class="form-control" id="contacts" placeholder="nºtelemóvel">
-		</div>
-		<div class="form-group">
-			<label for="morada">morada</label>
-			<input type="text" class="form-control" id="morada" placeholder="">
-		</div>
+      </form>
 
-
-			<button type="submit" class="btn btn-primary">criar perfil</button>
       <div>
-</form>
-
+	<a class="btn btn-primary" href="/profissional" role="button">Submeter</a>
+      </div>
+    </div>
     <!-- Welcome Message -->
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -90,6 +88,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
-
 </html>
-

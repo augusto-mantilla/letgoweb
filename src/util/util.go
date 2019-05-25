@@ -1,6 +1,7 @@
 package util
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -115,37 +116,45 @@ const doc1 = `<!DOCTYPE html>
 const filename = "templates/test.html"
 
 func Professional(w http.ResponseWriter, req *http.Request) {
-	w.Header().Add("Content Type", "text/html")
-	tmpl, err := template.New("mingTemplate").Parse(doc1)
-	if err == nil {
-		context := Context1{"Ming", "I am a problem solver!"}
-		tmpl.Execute(w, context)
-	} else {
-		log.Println(err.Error())
+	path := "templates/professional.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
 	}
+	w.Write(data)
 }
 
 func Commercial(w http.ResponseWriter, req *http.Request) {
-	w.Header().Add("Content Type", "text/html")
-	tmpl, err := template.New("rioTemplate").Parse(doc1)
-	if err == nil {
-		context := Context1{"Rio", "I drank the google-aid"}
-		tmpl.Execute(w, context)
-	} else {
-		log.Println(err.Error())
+	path := "templates/commercial.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
 	}
+	w.Write(data)
 }
 
 func Private(w http.ResponseWriter, req *http.Request) {
-	w.Header().Add("Content Type", "text/html")
-	tmpl, err := template.New("jamesTemplate").Parse(doc1)
-	if err == nil {
-		context := Context1{"James", "Another beer, please"}
-		tmpl.Execute(w, context)
-	} else {
-		log.Println(err.Error())
+	path := "templates/private.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
 	}
+	w.Write(data)
 }
+
+func Proposal(w http.ResponseWriter, req *http.Request) {
+	path := "templates/proposalForm.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
 func ToddFunc(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 	tmpl, err := template.New("toddTemplate").Parse(doc1)
