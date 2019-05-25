@@ -185,6 +185,26 @@ func Proposal(w http.ResponseWriter, req *http.Request) {
 	w.Write(data)
 }
 
+func PublicRequest(w http.ResponseWriter, req *http.Request) {
+	path := "templates/publicRequest.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
+func DirectRequest(w http.ResponseWriter, req *http.Request) {
+	path := "templates/directRequest.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
 func ToddFunc(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 	tmpl, err := template.New("toddTemplate").Parse(doc1)
