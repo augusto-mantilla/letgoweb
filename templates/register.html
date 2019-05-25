@@ -1,5 +1,18 @@
 <!doctype html>
 <html lang="en">
+  <style>
+   select {
+     width: 100%;
+     padding: 16px 20px;
+     border: none;
+     border-radius: 5px;
+     background-color: #f1f1f1;
+   }
+   label.bold {
+     font-weight: bold;
+     font-size: 2vw;
+   }
+  </style>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,9 +30,37 @@
 	<h1>LetMeFix
 	</h1>
       </div>
-      <a class="btn btn-primary" href="/professional" role="button">Profisionais</a>
-      <a class="btn btn-primary" href="/commercial" role="button">Clientes Comercias</a>
-      <a class="btn btn-primary" href="/private" role="button">Clientes Privados</a>
+
+      <label class="bold" for="areaProfissional"><b>Àrea Profissional:</b></label>
+
+      <div>
+	<h4>Cliente Privado</h4>
+	<div>
+	  informação do para o cliente privado
+	  Mantilla é gay <3
+	</div>
+	<br>
+	<a class="btn btn-primary" href="/clientePrivado" role="button">Criar Perfil</a>
+      </div>
+
+      <div>
+	<h4>Cliente Comercial</h4>
+	<div>
+	  informação do para o cliente comercial
+	</div>
+	<br>
+	<a class="btn btn-primary" href="/clienteComercial" role="button">Criar Perfil</a>	
+      </div>
+
+      <div>
+	<h4>Profissional</h4>
+	<div>
+	  informação do para o profissional
+	</div>
+	<br>
+	<a class="btn btn-primary" href="/profissional" role="button">Criar Perfil</a>
+      </div>
+	
     </div>
     <!-- Welcome Message -->
     
