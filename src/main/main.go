@@ -49,6 +49,7 @@ func main() {
 	http.HandleFunc("/request/direct", util.DirectRequest)
 	http.HandleFunc("/client/showPublicProposals", util.ShowPublicProposals)
 	http.HandleFunc("/request/execution", util.ExecutionRequest)
+	http.HandleFunc("/client/showRequests", util.ShowRequests)
 	http.ListenAndServe(":8080", nil)
 }
 
