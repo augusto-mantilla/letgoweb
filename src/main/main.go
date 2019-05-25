@@ -47,6 +47,7 @@ func main() {
 	http.HandleFunc("/private/profile", util.PrivateProfile)
 	http.HandleFunc("/request/public", util.PublicRequest)
 	http.HandleFunc("/request/direct", util.DirectRequest)
+	http.HandleFunc("/request/execution", util.ExecutionRequest)
 	http.ListenAndServe(":8080", nil)
 }
 

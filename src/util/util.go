@@ -205,6 +205,16 @@ func DirectRequest(w http.ResponseWriter, req *http.Request) {
 	w.Write(data)
 }
 
+func ExecutionRequest(w http.ResponseWriter, req *http.Request) {
+	path := "templates/executionRequest.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
 func ToddFunc(w http.ResponseWriter, req *http.Request) {
 	w.Header().Add("Content Type", "text/html")
 	tmpl, err := template.New("toddTemplate").Parse(doc1)

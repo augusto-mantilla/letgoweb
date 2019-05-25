@@ -38,7 +38,7 @@
     <!-- Bootstrap CSS -->
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Pedido Público</title>
+    <title>Pedido Direto</title>
   </head>
   <!-- Name of the company -->
   <body>
@@ -56,27 +56,29 @@
       </div>
       <br>
 
-      <label class="bold">Formulário do Pedido Público</label>
+      <label class="bold">Formulário do Pedido Direto</label>
 
       <form>
 	<span>*Campos Obrigatórios</span><br>
 	<br>
-	<b>Data limite para receber propostas:<span>*</span>  </b><input type="date" name="datalimite"><br>
+	<b>Data limite para receber proposta</b><span>*</span> </b><input type="date" name="datalimite">
 	<br>
-	<b>Área profissional:<span>*</span>  </b>
-	<select>
-	  <option value="construcao civil">Construção Civil</option>
-	  <option value="eletrecista">Eletrecista</option>
-	  <option value="canalizador">Canalizador</option>
-	  <option value="carpintaria">Carpintaria</option>
-	</select>
 	<br>
+	<b>Área profissional:<span>*</span></b><br>
+	<input type="checkbox" name="construcao civil">Construção Civil<br>
+	<input type="checkbox" name="eletrecista">Eletrecista<br>
+	<input type="checkbox" name="canalizador">Canalizador<br>
+	<input type="checkbox" name="carpintaria">Carpintaria<br>
 	<br>
 	<b>Morada do pedido:</b><span>*</span><br>
 	<textarea name="moradaPedido" rows="5" cols="40"></textarea><br>
 	<br>
-	<b>Descrição da tarefa:</b><span>*</span><br>
+	<b>Descrição geral da tarefa:</b><span>*</span><br>
 	<textarea name="descricaoTarefa" rows="6" cols="100"></textarea><br>
+	<br>
+	<b>Descrição por área profissional:</b><span>*</span><br>
+	<textarea name="descricaoareprofissional" rows="6" cols="100"></textarea><br>
+	<br>
 	<br>
 	<b>Foto descritiva:</b><span>* </span><input type="file" name="foto" <br>
 	<br>
