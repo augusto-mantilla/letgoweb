@@ -40,6 +40,7 @@ func main() {
 	http.HandleFunc("/callback", handleCallback)
 	http.HandleFunc("/professional", util.Professional)
 	http.HandleFunc("/commercial", util.Commercial)
+	http.HandleFunc("/commercial/profile", util.CommercialProfile)
 	http.HandleFunc("/professional/profile", util.ProfessionalProfile)
 	http.HandleFunc("/professional/proposal", util.Proposal)
 	http.HandleFunc("/private", util.Private)
