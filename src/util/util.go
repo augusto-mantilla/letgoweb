@@ -125,6 +125,16 @@ func Professional(w http.ResponseWriter, req *http.Request) {
 	w.Write(data)
 }
 
+func ProfessionalProfile(w http.ResponseWriter, req *http.Request) {
+	path := "templates/professionalProfile.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
 func Commercial(w http.ResponseWriter, req *http.Request) {
 	path := "templates/commercial.html"
 	data, err := ioutil.ReadFile(path)

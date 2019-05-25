@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <style>
+   label.bold {
+     font-weight: bold;
+     font-size: 2vw;
+   }
+   .navbar {
+     width: 100%;
+     background-color: #555;
+     overflow: auto;
+   }
+
+   /* Navbar links */
+   .navbar a {
+     float: left;
+     text-align: center;
+     padding: 0px;
+     color: white;
+     text-decoration: none;
+     font-size: 17px;
+   }
+
+   /* Navbar links on mouse-over */
+   .navbar a:hover {
+     background-color: #000;
+   }
+   .column {
+     float: left;
+     width: 50%;
+     padding: 17px;
+     height: 300px; /* Should be removed. Only for demonstration */
+   }
+   .checked {
+     color: orange;
+   }
+  </style>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Registo</title>
+  </head>
+  <!-- Name of the company -->
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+	<h1>LetMeFix</h1>
+      </div>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <div class="navbar">
+	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+	<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+	<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+	<a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+      </div>
+
+      <br>
+      <label class="bold">Perfil do Profissional</label>
+
+      <div class="row">
+	<div class="column">
+	  <br>
+	  <br>
+	  <b>Nome: </b> Fábio Pacheco
+	  <br>
+	  <br>
+	  <b>Área Profissioal: </b> Canalizador
+	  <br>
+	  <br>
+	  <b>Morada: </b> Estrada da Maria Madalena Nº5
+	  <br>
+	</div>
+	<div class="column">
+	  <br>
+	  <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" width="150" height="150"><br><br>
+	  <b>Classificação:</b>
+	  <span class="fa fa-star checked"></span>
+	  <span class="fa fa-star checked"></span>
+	  <span class="fa fa-star checked"></span>
+	  <span class="fa fa-star"></span>
+	  <span class="fa fa-star"></span>
+	   (3.2)
+	  <br>
+	  <br>
+	</div>
+      </div>
+      
+      <b>Histórico de Obras / Avaliações: </b><button href="#demo" type="button" data-toggle="collapse">Mostrar Todos</button>
+      <br>
+      <br>
+      <b>Ma*** </b><br>
+      <b>Descrição: </b>
+      Reparar o cano da casa de banho que estava roto mas acabou por ser mais complicado que o esperado
+      <br>
+      <b>Avaliação: </b>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked" ></span>
+      <span class="fa fa-star"></span>
+      (4)<br>
+      Muito bom trabalho, mas demorou mais que estava planeado
+      <br>
+      <hr>
+      <br>
+      <b>Fr*** </b><br>
+      <b>Descrição: </b>
+      Canalização de uma casa de banho por completo
+      <br>
+      <b>Avaliação: </b>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      (5)<br>
+      Muito bom trabalho, trabalha muito bem!!
+      <br>
+      <hr>
+      <br>
+      <b>Gra*** </b><br>
+      <b>Descrição: </b>
+      Montagem de um sitema de saniemento numa casa completa. Mais caro do que esperado
+      <br>
+      <b>Avaliação: </b>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      (3)<br>
+      Trablha muito bem feito, o orçamento não foi o inicial
+      <br>
+      <hr>
+      <br>
+      <div id="demo" class="collapse">
+	<b>Au*** </b><br>
+	<b>Descrição: </b>
+	Fuga de água na casa de banho
+	<br>
+	<b>Avaliação: </b>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked" ></span>
+	<span class="fa fa-star checked"></span>
+	(5)<br>
+	Muito bom trabalho, muito bom profissional
+	<br>
+	<hr>
+	<br>
+	<b>Fr*** </b><br>
+	<b>Descrição: </b>
+	Cano entupido no armazém de uma empresa
+	<br>
+	<b>Avaliação: </b>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	(5)<br>
+	Muito bom trabalho, execente Profissional!!
+	<br>
+	<hr>
+	<br>
+	<b>Gra*** </b><br>
+	<b>Descrição: </b>
+	Saniemento e Canalização de uma casa de banho
+	<br>
+	<b>Avaliação: </b>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>
+	<span class="fa fa-star"></span>
+	(3)<br>
+	Trablha muito bem feito, o orçamento não foi o inicial
+	<br>
+	<hr>
+	<br>
+      </div>
+    </div>
+    <!-- Welcome Message -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
