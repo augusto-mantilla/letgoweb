@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
   <style>
    label.bold {
      font-weight: bold;
@@ -26,6 +27,7 @@
      background-color: #000;
    }
   </style>
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -34,7 +36,9 @@
     <!-- Bootstrap CSS -->
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Registar Cliente Comercial</title>
+
   </head>
   <!-- Name of the company -->
   <body>
@@ -42,9 +46,7 @@
       <div class="jumbotron">
 	<h1>LetMeFix
 	</h1>
-      </div>
-
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <div class="navbar">
 	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
@@ -56,10 +58,45 @@
       <br>
       <label class="bold">Registo do Cliente Comercial</label>
 
-      
-      
-    </div>
-    <!-- Welcome Message -->
+
+	</div>
+    <form>
+	 
+	  	<div class="form-group">
+			<label for="nome_Completo">Nome Completo</label><br>
+			<input Type="text" class="form-contol" id="nome_Completo" placeholder="escrever nome">
+		</div>
+		<div class="form-group">
+			<label for="nome_empresa">Nome Da Empresa</label><br>
+			<input Type="text" class="form-contol" id="nome_empresa" placeholder="empresa">
+		</div>
+		<div class="form-group">
+			<label for="ramo"> Ramo Da Empresa</label><br>
+			
+			<select>
+				<option value="">select</option>
+				<option value="restauracao">restauração</option>
+				<option value="hotelaria">hotelaria</option>
+				<option value="v_eletromesticos">venda de eletrodomésticos</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="nif">NIF</label>
+			<input type="text" class="form-control" id="nif"  placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label for="contacts">Contacto</label>
+			<input type="text" class="form-control" id="contacts" placeholder="nºtelemóvel">
+		</div>
+		<div class="form-group">
+			<label for="morada">morada</label>
+			<input type="text" class="form-control" id="morada" placeholder="">
+		</div>
+
+			<button type="submit" class="btn btn-primary">criar perfil</button>
+	    </form>
+      </div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -69,3 +106,4 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
