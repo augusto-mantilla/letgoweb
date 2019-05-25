@@ -43,6 +43,7 @@ func main() {
 	http.HandleFunc("/professional/profile", util.ProfessionalProfile)
 	http.HandleFunc("/professional/proposal", util.Proposal)
 	http.HandleFunc("/private", util.Private)
+	http.HandleFunc("/private/profile", util.PrivateProfile)
 	http.ListenAndServe(":8080", nil)
 }
 
