@@ -39,18 +39,28 @@ func main() {
 	http.HandleFunc("/", handleHome)
 	http.HandleFunc("/login", handleLogin)
 	http.HandleFunc("/callback", handleCallback)
+
+	http.HandleFunc("/newRequest", util.NewRequest)
+
 	http.HandleFunc("/professional", util.Professional)
 	http.HandleFunc("/commercial", util.Commercial)
+	http.HandleFunc("/private", util.Private)
+
 	http.HandleFunc("/commercial/profile", util.CommercialProfile)
+	http.HandleFunc("/commercial/showRequests", util.CommercialShowRequests)
+
 	http.HandleFunc("/professional/profile", util.ProfessionalProfile)
 	http.HandleFunc("/professional/proposal", util.Proposal)
-	http.HandleFunc("/private", util.Private)
+
 	http.HandleFunc("/private/profile", util.PrivateProfile)
+	http.HandleFunc("/private/showRequests", util.PrivateShowRequests)
+
 	http.HandleFunc("/request/public", util.PublicRequest)
 	http.HandleFunc("/request/direct", util.DirectRequest)
-	http.HandleFunc("/client/showPublicProposals", util.ShowPublicProposals)
 	http.HandleFunc("/request/execution", util.ExecutionRequest)
-	http.HandleFunc("/client/showRequests", util.ShowRequests)
+
+	http.HandleFunc("/proposals/showPublicProposals", util.ShowPublicProposals)
+
 	http.ListenAndServe(":8080", nil)
 }
 
