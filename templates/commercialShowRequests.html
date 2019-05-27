@@ -25,9 +25,19 @@
    .navbar a:hover {
      background-color: #000;
    }
-
    span{
-     color: red;
+     color: black;
+   }
+   table, th, td {
+     border: 1px solid black;
+     border-collapse: collapse;
+   }
+   th, td {
+     padding: 5px;
+     text-align: center;    
+   }
+   .checked {
+     color: orange;
    }
   </style>
   <head>
@@ -39,7 +49,7 @@
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Pedido Direto</title>
+    <title>Pedidos do Utilizador</title>
   </head>
   <!-- Name of the company -->
   <body>
@@ -51,52 +61,80 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div class="navbar">
 	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-	<a href="/newRequest"><i class="fas fa-file-alt"></i> Fazer Novo Pedido</a>
-	<a href="#"><i class="fa fa-fw fa-envelope"></i> Ver Pedidos</a>
-	<a href="#"><i class="fa fa-fw fa-user"></i> Ver Perfil</a>
+	<a href="#"><i class="fas fa-file-alt"></i> Fazer Novo Pedido</a>
+	<a href="/commercial/showRequests"><i class="fa fa-fw fa-envelope"></i> Ver Pedidos</a>
+	<a href="/commercial/profile"><i class="fa fa-fw fa-user"></i> Ver Perfil</a>
 	<a href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
       </div>
       <br>
+      <label class="bold">Pedidos de Cliente Comercial</label>
+      <br>
+      <br>
+      <table style="width:100%; text-align:center" >
+	<tr>
+	  <th>Nº Pedido</th>
+	  <th>Tipo de Pedidos</th>
+	  <th>Descrição do Pedido</th>
+	  <th>ÁreaProfissional</th>
+	  <th>Profissional</th>
+	  <th>Data Inicio</th>
+	  <th>Data Fim</th>
+	  <th>Preço Cancelamento/Alteração</th>
+	  <th>Preço</th>
+	  <th>Estado</th>
+	  <th>Ações</th>
+	</tr>
+	<tr>
+	  <td>13424</td>
+	  <td>Público</td>
+	  <td>Reparação do cano da cozinha</td>
+	  <td>Canalizador</td>
+	  <td>-</td>
+	  <td>6/06/2019</td>
+	  <td>15/06/2019</td>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>Recebendo Propostas</td>
+	  <td>
+	    <a class="btn btn-primary" href="/proposals/showPublicProposals">Ver Propostas</a>
+	  </td>
+	</tr>
 
-      <label class="bold">Formulário do Pedido Direto</label>
+	<tr>
+	  <td>134</td>
+	  <td>Público</td>
+	  <td>Criação da mesa da cozinha</td>
+	  <td>Carpintaria</td>
+	  <td>Luís Gomes</td>
+	  <td>15/05/2019</td>
+	  <td>30/05/2019</td>
+	  <td>15 €</td>
+	  <td>300 €</td>
+	  <td>Em progresso</td>
+	  <td>
+	    <a class="btn btn-primary" href="#">Contactar Profissional</a>
+	  </td>
+	</tr>
 
-      <form>
-	<span>*Campos Obrigatórios</span><br>
-	<br>
-	<b>Data limite para receber propostas:<span>*</span>  </b><input type="date" name="incioObra"><br>
-	<br>
-	<b>Área profissional:<span>*</span></b>
-	<select>
-	  <option value="construcao civil">Construção Civil</option>
-	  <option value="eletrecista">Eletrecista</option>
-	  <option value="canalizador">Canalizador</option>
-	  <option value="carpintaria">Carpintaria</option>
-	</select>
-	<br>
-	<br>
-	<b>Profissional a contratar:<span>*</span></b>
-	<select>
-	  <option value="1">André Telo</option>
-	  <option value="2">Agusto Mantilla</option>
-	  <option value="3">Madalena Rosária</option>
-	  <option value="4">Francisco Tavares</option>
-	</select>
-	<br>
-	<br>
-	<b>Morada do pedido:</b><span>*</span><br>
-	<textarea name="moradaPedido" rows="5" cols="40"></textarea><br>
-	<br>
-	<b>Descrição da tarefa:</b><span>*</span><br>
-	<textarea name="descricaoTarefa" rows="6" cols="100"></textarea><br>
-	<br>
-	<b>Foto descritiva:</b><span>* </span><input type="file" name="foto" <br>
-	<br>
-	<br>
-      </form>
+	<tr>
+	  <td>1243</td>
+	  <td>Público</td>
+	  <td>Construção do churrasco</td>
+	  <td>LetMeFix</td>
+	  <td>LetMeFix</td>
+	  <td>30/05/2019</td>
+	  <td>25/06/2019</td>
+	  <td>200 €</td>
+	  <td>2060 €</td>
+	  <td>Em progresso</td>
+	  <td>
+	    <a class="btn btn-primary" href="#">Contactar LetMeFix</q>
+	  </td>
+	</tr>
 
-      <div>
-	<a class="btn btn-primary" href="/profissional" role="button">Submeter</a>
-      </div>
+
+      </table>
+      
     </div>
     <!-- Welcome Message -->
 

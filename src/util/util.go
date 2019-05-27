@@ -226,8 +226,28 @@ func ExecutionRequest(w http.ResponseWriter, req *http.Request) {
 	w.Write(data)
 }
 
-func ShowRequests(w http.ResponseWriter, req *http.Request) {
-	path := "templates/showRequests.html"
+func CommercialShowRequests(w http.ResponseWriter, req *http.Request) {
+	path := "templates/commercialShowRequests.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
+func PrivateShowRequests(w http.ResponseWriter, req *http.Request) {
+	path := "templates/privateShowRequests.html"
+	data, err := ioutil.ReadFile(path)
+	if err != nil {
+		fmt.Printf("Could not load page: %s\n", path)
+		return
+	}
+	w.Write(data)
+}
+
+func NewRequest(w http.ResponseWriter, req *http.Request) {
+	path := "templates/newRequest.html"
 	data, err := ioutil.ReadFile(path)
 	if err != nil {
 		fmt.Printf("Could not load page: %s\n", path)

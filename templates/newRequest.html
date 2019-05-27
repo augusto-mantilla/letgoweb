@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <style>
+   label.bold {
+     font-weight: bold;
+     font-size: 2vw;
+   }
+
+   .navbar {
+     width: 100%;
+     background-color: #555;
+     overflow: auto;
+   }
+
+   /* Navbar links */
+   .navbar a {
+     float: left;
+     text-align: center;
+     padding: 0px;
+     color: white;
+     text-decoration: none;
+     font-size: 17px;
+   }
+
+   /* Navbar links on mouse-over */
+   .navbar a:hover {
+     background-color: #000;
+   }
+  </style>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Registar</title>
+  </head>
+  <!-- Name of the company -->
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+	<h1>LetMeFix</h1>
+      </div>
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="navbar">
+	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+	<a href="/newRequest"><i class="fas fa-file-alt"></i> Fazer Novo Pedido</a>
+	<a href="#"><i class="fa fa-fw fa-envelope"></i> Ver Pedidos</a>
+	<a href="#"><i class="fa fa-fw fa-user"></i> Ver Perfil</a>
+	<a href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+      <br>
+
+      <label class="bold" for="areaProfissional"><b>Tipo de Pedidos:</b></label>
+      <br>
+      <br>
+      <div>
+	<h4>Pedido Direto</h4>
+	<div>
+	  Utilizador que pertende fazer contratação de profissionais para fins pessoais.
+	</div>
+	<br>
+	<a class="btn btn-primary" href="/request/direct" role="button">Fazer Pedido Direto</a>
+	<br>
+	<br>
+      </div>
+
+      <div>
+	<h4>Pedido Públicos</h4>
+	<div>
+	  Utilizador que pertende fazer contratação de profissionais para fins comerciais, fornecer serviços pós-venda ou de instalação a um cliente.
+	</div>
+	<br>
+	<a class="btn btn-primary" href="/request/public" role="button">Fazer Pedido Público</a>	
+
+      </div>
+		
+      <div>
+	<br>
+	<h4>Proposta de Execução</h4>
+	<div>
+	  Utilizador profissional das áreas da construção civil, canalização e carpintaria que pertende prestar serviços a cliente privados e comerciais.
+	</div>
+	<br>
+	<a class="btn btn-primary" href="/request/execution" role="button">Fazer Proposta de Execução</a>
+      </div>
+
+    </div>
+    <!-- Welcome Message -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
