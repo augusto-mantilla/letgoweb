@@ -51,6 +51,7 @@ func main() {
 	http.HandleFunc("/client/showPublicProposals", util.ShowPublicProposals)
 	http.HandleFunc("/request/execution", util.ExecutionRequest)
 	http.HandleFunc("/client/showRequests", util.ShowRequests)
+	http.HandleFunc("/commecial/message", util.Message)
 	http.ListenAndServe(":8080", nil)
 }
 
