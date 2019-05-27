@@ -3,8 +3,8 @@
 ### Requirements
 
 - go compiler
-- mysql server com utilizador letme -p hello
-- utilizar sql code in ./db
+- mysql server with user letme -p hello
+- use sql code in ./db
 
 ### For building and running the server
 
