@@ -278,7 +278,7 @@ func ToddFunc(w http.ResponseWriter, req *http.Request) {
 }
 
 func Message(w http.ResponseWriter, req *http.Request) {
-	path := "templates/showRequests.html"
+	path := "templates/message.html"
 	data, err := ioutil.ReadFile(path)
 	if err != nil {
 		fmt.Printf("Could not load page: %s\n", path)
