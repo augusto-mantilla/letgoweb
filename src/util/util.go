@@ -122,6 +122,7 @@ func Professional(w http.ResponseWriter, req *http.Request) {
 		fmt.Printf("Could not load page: %s\n", path)
 		return
 	}
+	InsertAddress("9020-123", "Caminho")
 	w.Write(data)
 }
 

@@ -1,26 +1,26 @@
 package main
 
 import (
-	util "../util"
-	//	"encoding/json"
 	"fmt"
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
+	//	"encoding/json"
+
+	"golang.org/x/oauth2"
+	"golang.org/x/oauth2/google"
+
+	util "../util"
 )
 
 var (
 	googleOauthConfig = &oauth2.Config{
-		RedirectURL: "http://localhost:8080/callback",
-		ClientID:    os.Getenv("GOOGLE_CLIENT_ID"),
-		//"608621652614-2qd9a4gbf7gq4eu9god80o8bnh9pm2qq.apps.googleusercontent.com",
+		RedirectURL:  "http://localhost:8080/callback",
+		ClientID:     os.Getenv("GOOGLE_CLIENT_ID"),
 		ClientSecret: os.Getenv("GOOGLE_CLIENT_SECRET"),
-		//"4-LZrLdA26_P5KkIdjky1HUI",
-		Scopes:   []string{"https://www.googleapis.com/auth/userinfo.email"},
-		Endpoint: google.Endpoint,
+		Scopes:       []string{"https://www.googleapis.com/auth/userinfo.email"},
+		Endpoint:     google.Endpoint,
 	}
 
 	//TODO: randomize
@@ -35,6 +35,7 @@ type User struct {
 }
 
 func main() {
+	util.InitDB("letme:hello@tcp(localhost:3306)/letmefix")
 	http.HandleFunc("/", handleHome)
 	http.HandleFunc("/login", handleLogin)
 	http.HandleFunc("/callback", handleCallback)
