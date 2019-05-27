@@ -61,6 +61,8 @@ func main() {
 	http.HandleFunc("/request/execution", util.ExecutionRequest)
 
 	http.HandleFunc("/commecial/message", util.Message)
+	http.HandleFunc("/private/message", util.Message)
+	http.HandleFunc("/professional/message", util.Message)
 
 	http.HandleFunc("/proposals/showPublicProposals", util.ShowPublicProposals)
 	http.ListenAndServe(":8080", nil)
