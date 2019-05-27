@@ -51,6 +51,7 @@ func main() {
 
 	http.HandleFunc("/professional/profile", util.ProfessionalProfile)
 	http.HandleFunc("/professional/proposal", util.Proposal)
+	http.HandleFunc("/professional/showProposals", util.ShowProposals)
 
 	http.HandleFunc("/private/profile", util.PrivateProfile)
 	http.HandleFunc("/private/showRequests", util.PrivateShowRequests)

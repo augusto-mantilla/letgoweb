@@ -25,9 +25,19 @@
    .navbar a:hover {
      background-color: #000;
    }
-
    span{
-     color: red;
+     color: black;
+   }
+   table, th, td {
+     border: 1px solid black;
+     border-collapse: collapse;
+   }
+   th, td {
+     padding: 5px;
+     text-align: center;    
+   }
+   .checked {
+     color: orange;
    }
   </style>
   <head>
@@ -39,7 +49,7 @@
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Fazer proposta</title>
+    <title>Lsita de Pedidos</title>
   </head>
   <!-- Name of the company -->
   <body>
@@ -56,29 +66,67 @@
 	<a href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
       </div>
       <br>
+      <label class="bold">Lista de Pedidos</label>
+      <br>
+      <br>
+      <table style="width:100%; text-align:center" >
+	<tr>
+	  <th>Nº Pedido</th>
+	  <th>Tipo de Pedidos</th>
+	  <th>Descrição do Pedido</th>
+	  <th>Data Inicio</th>
+	  <th>Data Fim</th>
+	  <th>Preço Cancelamento/Alteração</th>
+	  <th>Preço</th>
+	  <th>Estado</th>
+	  <th>Ações</th>
+	</tr>
+	<tr>
+	  <td>13424</td>
+	  <td>Público</td>
+	  <td>Reparação do cano da cozinha</td>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>-</td>
+	  <td>Espera de Proposta (até 18/05/2019)</td>
+	  <td>
+	    <a class="btn btn-primary" href="#">Contactar Cliente</a>
+	    <br>
+	    <br>
+	    <a class="btn btn-primary" href="/professional/proposal"> Fazer Proposta </a>
+	  </td>
+	</tr>
 
-      <label class="bold">Formulário da proposta ao cliente</label>
+	<tr>
+	  <td>134</td>
+	  <td>Público</td>
+	  <td>Criação da mesa da cozinha</td>
+	  <td>15/05/2019</td>
+	  <td>30/05/2019</td>
+	  <td>15 €</td>
+	  <td>300 €</td>
+	  <td>Em progresso</td>
+	  <td>
+	    <a class="btn btn-primary" href="#">Contactar Profissional</a>
+	  </td>
+	</tr>
 
-      <form>
-	<span>*Campos Obrigatórios</span><br>
-	<br>
-	<b>Preço:<span>*</span>  </b><input type="number" step="0.01" style="width: 100px;" name="preço"> €<br>
-	<br>
-	<b>Data de incio de obra:<span>*</span>  </b><input type="date" name="incioObra"><br>
-	<br>
-	<b>Data de fim de obra:<span>*</span>  </b><input type="date" name="fimObra"><br>
-	<br>
-	<b>Custo de cancelamento ou alterações significativas:<span>*</span>  </b><input type="number" style="width: 100px;" name="cancAlt"> €<br>
-	<br>
-	<b>Observações relevantes para o cliente: </b><br>
-	<textarea name="observacoes" rows="5" cols="50"></textarea><br>
-	<br>
-
-      </form>
-
-      <div>
-	<a class="btn btn-primary" href="/profissional" role="button">Submeter</a>
-      </div>
+	<tr>
+	  <td>1243</td>
+	  <td>Público</td>
+	  <td>Construção do churrasco</td>
+	  <td>30/05/2019</td>
+	  <td>25/06/2019</td>
+	  <td>200 €</td>
+	  <td>2060 €</td>
+	  <td>Em progresso</td>
+	  <td>
+	    <a class="btn btn-primary" href="#">Contactar LetMeFix</q>
+	  </td>
+	</tr>
+      </table>
+      
     </div>
     <!-- Welcome Message -->
 
