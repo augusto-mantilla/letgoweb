@@ -35,6 +35,7 @@
 
     <!-- Bootstrap CSS -->
     <!--link rel="stylesheet" type="text/css" href="css/bootstrap.css"-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Message</title>
@@ -47,21 +48,21 @@
 	<h1>LetMeFix</h1>
       </div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
       <div class="navbar">
 	<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-	<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-	<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-	<a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+	<a href="/newRequest"><i class="fas fa-file-alt"></i> Fazer Novo Pedido</a>
+	<a href="/private/showRequests"><i class="fa fa-fw fa-envelope"></i> Ver Pedidos</a>
+	<a href="/private/profile"><i class="fa fa-fw fa-user"></i> Ver Perfil</a>
+	<a href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
       </div>
+      <br>
 
       <br>
       <label class="bold">Registo do Cliente Comercial</label>
 
       <form action="/commercial" method="get">
-	  <textarea id="message" name="mess" row="60" col="200">Escreva uma menssagem</textarea>
-	</div>
-
+	<textarea id="message" name="mess" rows="6" cols="100">Escreva uma menssagem</textarea>
+	<br>
 	<button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
