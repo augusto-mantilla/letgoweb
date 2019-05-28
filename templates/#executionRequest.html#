@@ -56,7 +56,8 @@
       </div>
       <br>
 
-      <label class="bold">Formulário da Proposta de Execução</label>
+      <label class="bold">Formulário da Proposta de Execução
+      </label>
 
       <form>
 	<span>*Campos Obrigatórios</span><br>
