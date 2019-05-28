@@ -15,6 +15,6 @@ $ go get cloud.google.com/go
 $ go get github.com/go-sql-driver/mysql
 $ git clone https://github.com/augusto-mantilla/letgoweb.git
 $ cd letgoweb
-letgoweb $ go build
+letgoweb $ go build src/main/main.go
 letgoweb $ ./main
 ```
